@@ -2,6 +2,6 @@
 A class which generates a random password with given length.
 
 ## Examples
-Length of the password: `8`
+Length of the password: `15`
 
-Generated password: `((<Dp*H6`
+Generated password: `zXS4!-1w*>0-Ksa`
