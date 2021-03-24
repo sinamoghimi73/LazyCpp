@@ -30,7 +30,6 @@ private:
   const std::string _alphaNumeric{};
   const int _alphaNumericSize{};
   std::string _password{};
-  int _index{};
 };
 
 std::string password(int &length) {
