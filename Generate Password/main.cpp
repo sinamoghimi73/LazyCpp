@@ -19,8 +19,9 @@ public:
   }
 
   void generatePassword() {
-    for (int i{}; i < _size; ++i)
-      _password += _alphaNumeric.at(rand() % _alphaNumericSize);
+    for (int i{1}; i <= _size; ++i)
+      _password +=
+          ((i % 6 == 0) ? '-' : _alphaNumeric.at(rand() % _alphaNumericSize));
   }
 
   std::string getPassword() { return _password; }
