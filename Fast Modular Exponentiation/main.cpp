@@ -12,7 +12,7 @@ int fastModularExponentiation(const int &base, const int &power,
   for (int i{}; i < n; ++i) {
     if (power & mask)
       x = (x * modularPower) % modulo;
-      modularPower = (modularPower * modularPower) % modulo;
+    modularPower = (modularPower * modularPower) % modulo;
     mask <<= 1;
   }
 
