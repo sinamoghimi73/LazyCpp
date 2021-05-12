@@ -9,10 +9,10 @@
 class passwordGenerator {
 public:
   passwordGenerator(int size = 0)
-      : _size{size},
-        _alphaNumeric{"0123456789!@#$%^&*\[]/"
-                      "{}\'\"`()?|-_+<>~"
-                      "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"},
+      : _size{size}, _capitalLetters{"ABCDEFGHIJKLMNOPQRSTUVWXYZ"},
+        _smallLetters{"abcdefghijklmnopqrstuvwxyz"}, _numbers{"0123456789"},
+        _symbols{"!@#$%^&*\[]/\'\"{}()?|-_+<>~"},
+        _alphaNumeric{_capitalLetters + _smallLetters + _numbers + _symbols},
         _alphaNumericSize{static_cast<int>(_alphaNumeric.size())} {
     // use current time as seed for random generator
     std::srand(static_cast<unsigned int>(std::time(nullptr)));
@@ -28,7 +28,8 @@ public:
 
 private:
   const int _size{};
-  const std::string _alphaNumeric{};
+  const std::string _capitalLetters{}, _smallLetters{}, _numbers{}, _symbols{},
+      _alphaNumeric{};
   const int _alphaNumericSize{};
   std::string _password{};
 };
@@ -41,6 +42,7 @@ std::string password(int &length) {
 
 int main() {
   std::cout << "Length of the password: ";
+
   int length{};
   std::cin >> length;
 
