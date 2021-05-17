@@ -2,9 +2,9 @@
 A function which generates all permutation of a set.
 
 ## Examples
-Length of the password: `123` or `1 2 3`
+Entry: `123` or `1 2 3`
 
-Generated password: 
+Generated permutations: 
 ```
 123
 213
