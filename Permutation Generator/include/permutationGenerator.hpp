@@ -30,6 +30,7 @@ template <class entryType> void LOG(entryType &inputVector) {
   std::cout << "\n";
 }
 
+// Heap Permutation Algorithm
 template <class entryType, class entrySize>
 void permutationGenerator(entryType &a, entrySize size) {
   if (size == 1)
