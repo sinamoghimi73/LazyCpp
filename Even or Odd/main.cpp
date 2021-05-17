@@ -3,9 +3,8 @@
 //  S1N4M
 //
 
+#include "math.hpp"
 #include <iostream>
-
-bool isEven(int &number) { return !(number & 1); }
 
 int main() {
 
@@ -15,7 +14,7 @@ int main() {
   std::cin >> number;
 
   std::cout << "Integer " << number << " is "
-            << ((isEven(number) == true) ? "Even" : "Odd") << "\n";
+            << ((math::isEven(number) == true) ? "Even" : "Odd") << "\n";
 
   return 0;
 }

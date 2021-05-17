@@ -6,6 +6,6 @@
 #ifndef math_hpp
 #define math_hpp
 
-#include "include/fastModularExponentiation.hpp"
+#include "include/isEven.hpp"
 
 #endif /* math_hpp */
