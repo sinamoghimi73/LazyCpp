@@ -11,13 +11,7 @@
 namespace math {
 
 bool isPowerOfTwo(int number) {
-  int twosPower{number};
-  while (twosPower > 0) {
-    if ((twosPower & number) && (twosPower < number))
-      return false;
-    twosPower >>= 1;
-  }
-  return true;
+  return ((number & (number - 1)) == 0) ? true : false;
 }
 
 } // namespace math
