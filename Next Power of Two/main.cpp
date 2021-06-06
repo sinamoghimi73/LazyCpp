@@ -3,9 +3,8 @@
 //  Math
 //
 
-#include <iostream>
 #include "math.hpp"
-
+#include <iostream>
 
 int main() {
   int number{};
