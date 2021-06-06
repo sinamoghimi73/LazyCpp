@@ -1,4 +1,4 @@
-# Permutation Generator
+# Powers of Two
 A function which gets a number and gives an expression based on power of 2.
 
 ## Examples
