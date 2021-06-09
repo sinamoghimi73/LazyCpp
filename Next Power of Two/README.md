@@ -8,3 +8,6 @@ Output: `16`
 Entry: `128` 
 Output: `128`
 
+
+## Instructions
+Do `g++ -Wall -std=c++17 main.cpp` and then `./a.out`.

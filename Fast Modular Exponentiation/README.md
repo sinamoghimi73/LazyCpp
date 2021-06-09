@@ -7,3 +7,5 @@ Reference: [Discrete mathematics and its applications, Kenneth H. Rosen, 2018](h
 ## Examples
 `fastModularExponentiation(3, 644, 645) ➞ 36`
 
+## Instructions
+Do `g++ -Wall -std=c++17 main.cpp` and then `./a.out`.

@@ -13,3 +13,7 @@ Generated permutations:
 312
 132
 ```
+
+
+## Instructions
+Do `g++ -Wall -std=c++17 main.cpp` and then `./a.out`.
