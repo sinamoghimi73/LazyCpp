@@ -1,5 +1,5 @@
-# Summation of Digits
-A function which gets a number and tells you The summation of its digits.
+# Reduced Summation of Digits
+A function which gets a number and tells you The reduced summation of its digits.
 
 ## Examples
 Entry: `1021` 

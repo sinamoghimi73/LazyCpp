@@ -9,6 +9,6 @@
 int main() {
   int number{};
   std::cin >> number;
-  std::cout << math::digitSum(number) << std::endl;
+  std::cout << math::reducedDigitSum(number) << std::endl;
   return 0;
 }

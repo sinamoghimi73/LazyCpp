@@ -6,6 +6,6 @@
 #ifndef math_hpp
 #define math_hpp
 
-#include "digitSum.hpp"
+#include "reducedDigitSum.hpp"
 
 #endif /* math_hpp */
