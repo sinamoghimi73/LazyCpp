@@ -11,9 +11,7 @@
 
 namespace math {
 
-bool isPowerOfTwo(int number) {
-  return ((number & (number - 1)) == 0) ? true : false;
-}
+bool isPowerOfTwo(int number) { return number && !(number & (number - 1)); }
 
 int nextPowerOfTwo(int number) {
   if (isPowerOfTwo(number))
