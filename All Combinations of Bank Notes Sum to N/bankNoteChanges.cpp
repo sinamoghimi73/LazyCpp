@@ -6,8 +6,9 @@ void LOG(const std::vector<int> &notes, std::vector<int> &coefficientVector,
          const int &n) {
   std::string output{};
   for (unsigned int i{}; i < n; ++i)
-    output += (std::to_string(coefficientVector.at(i)) + "*" +
-               std::to_string(notes.at(i)) + " + ");
+    if (coefficientVector.at(i) != 0)
+      output += (std::to_string(coefficientVector.at(i)) + "*" +
+                 std::to_string(notes.at(i)) + " + ");
   output.pop_back();
   output.pop_back();
   std::cout << output << "\n";
