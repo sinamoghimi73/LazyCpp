@@ -14,19 +14,19 @@ void LOG(const std::vector<int> &notes, std::vector<int> &coefficientVector,
   std::cout << output << "\n";
 }
 
-void printAllCombinations(int target, int current_sum, int start,
+void printAllCombinations(int target, int currentSum, int start,
                           const std::vector<int> &notes,
                           std::vector<int> &coeff, const int &notesCount) {
 
-  if (target == current_sum) {
+  if (target == currentSum) {
     LOG(notes, coeff, static_cast<int>(notesCount));
   }
 
   for (int i{start}; i < notesCount; ++i) {
-    int temp_sum{current_sum + notes.at(i)};
-    if (temp_sum <= target) {
+    int tempSum{currentSum + notes.at(i)};
+    if (tempSum <= target) {
       coeff.at(i) += 1;
-      printAllCombinations(target, temp_sum, i, notes, coeff, notesCount);
+      printAllCombinations(target, tempSum, i, notes, coeff, notesCount);
       coeff.at(i) -= 1;
     } else
       return;
@@ -45,4 +45,5 @@ int main() {
   int noteSummation{};
   std::cin >> noteSummation;
   bankNotesCombination(noteSummation, notes, static_cast<int>(notes.size()));
+  return 0;
 }
