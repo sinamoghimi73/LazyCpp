@@ -23,10 +23,10 @@ void printAllCombinations(int target, int currentSum, int start,
   }
 
   for (int i{start}; i < notesCount; ++i) {
-    int tempSum{currentSum + notes.at(i)};
-    if (tempSum <= target) {
+    if (currentSum + notes.at(i) <= target) {
       coeff.at(i) += 1;
-      printAllCombinations(target, tempSum, i, notes, coeff, notesCount);
+      printAllCombinations(target, currentSum + notes.at(i), i, notes, coeff,
+                           notesCount);
       coeff.at(i) -= 1;
     } else
       return;
