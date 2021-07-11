@@ -1,6 +1,15 @@
 # Find All Sum Combinations
 Given a positive integer, 'target', print all possible combinations of positive integers that sum up to the 'target' number.
 
+This code is written based on the solution mentioned in: [educative.io](https://www.educative.io/m/find-all-sum-combinations)
+
+
+### Runtime Complexity
+`Exponential`
+
+### Memory Complexity
+`Linear, O(n)`
+
 ## Examples
 Allowed Numbers: `2, 1, 5`
 Entry: `10` 
