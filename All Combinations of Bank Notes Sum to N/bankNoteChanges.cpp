@@ -14,9 +14,9 @@ void LOG(const std::vector<int> &notes, std::vector<int> &coefficientVector,
   std::cout << output << "\n";
 }
 
-void printAllCombinations(int target, int currentSum, int start,
-                          const std::vector<int> &notes,
-                          std::vector<int> &coeff, const int &notesCount) {
+void generateAllCombinations(int target, int currentSum, int start,
+                             const std::vector<int> &notes,
+                             std::vector<int> &coeff, const int &notesCount) {
 
   if (target == currentSum) {
     LOG(notes, coeff, static_cast<int>(notesCount));
@@ -25,8 +25,8 @@ void printAllCombinations(int target, int currentSum, int start,
   for (int i{start}; i < notesCount; ++i) {
     if (currentSum + notes.at(i) <= target) {
       coeff.at(i) += 1;
-      printAllCombinations(target, currentSum + notes.at(i), i, notes, coeff,
-                           notesCount);
+      generateAllCombinations(target, currentSum + notes.at(i), i, notes, coeff,
+                              notesCount);
       coeff.at(i) -= 1;
     } else
       return;
@@ -37,7 +37,7 @@ void bankNotesCombination(const int &target, std::vector<int> &notes,
                           const int &notesCount) {
   std::vector<int> coeffVector(notesCount);
   std::sort(notes.begin(), notes.end());
-  printAllCombinations(target, 0, 0, notes, coeffVector, notesCount);
+  generateAllCombinations(target, 0, 0, notes, coeffVector, notesCount);
 }
 
 int main() {
