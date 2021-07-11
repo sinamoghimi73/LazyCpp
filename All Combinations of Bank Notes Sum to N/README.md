@@ -12,7 +12,9 @@ This code is written based on the solution mentioned in: [educative.io](https://
 
 ## Examples
 Allowed Numbers: `2, 1, 5`
+
 Entry: `10` 
+
 Output: 
 ```
 10*1 + 0*2 + 0*5 
@@ -28,7 +30,9 @@ Output:
 ```
 
 Allowed Numbers: `5, 10, 20, 50, 100`
+
 Entry: `100` 
+
 Output: 
 ```
 20*5 + 0*10 + 0*20 + 0*50 + 0*100 
