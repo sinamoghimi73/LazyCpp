@@ -10,6 +10,10 @@ This code is written based on the solution mentioned in: [educative.io](https://
 ### Memory Complexity
 `Linear, O(n)`
 
+
+#### *** Note
+Format : `(Coefficient) * (Bank Note Value)`
+
 ## Examples
 Allowed Numbers: `2, 1, 5`
 
