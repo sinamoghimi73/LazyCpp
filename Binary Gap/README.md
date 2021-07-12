@@ -8,16 +8,6 @@ Two 1's are adjacent if there are only 0's separating them (possibly no 0's). Th
 This code is written based on the challenge mentioned in: [LeetCode](https://leetcode.com/problems/binary-gap/)
 
 
-### Runtime Complexity
-`Exponential`
-
-### Memory Complexity
-`Linear, O(n)`
-
-
-#### *** Note
-Format : `(Coefficient) * (Bank Note Value)`
-
 ## Examples
 ### Example 1:
 Input: `n = 22`
