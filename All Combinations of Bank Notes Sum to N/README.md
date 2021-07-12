@@ -92,5 +92,5 @@ Output:
 ```
 
 ## Instructions
-Do `g++ -Wall -std=c++17 main.cpp` and then `./a.out`.
+Do `g++ -Wall -std=c++17 bankNoteChanges.cpp` and then `./a.out`.
 

@@ -38,5 +38,5 @@ Output: `1`
 Explanation: `6 in binary is "110"`
 
 ## Instructions
-Do `g++ -Wall -std=c++17 main.cpp` and then `./a.out`.
+Do `g++ -Wall -std=c++17 binaryGap.cpp` and then `./a.out`.
 
