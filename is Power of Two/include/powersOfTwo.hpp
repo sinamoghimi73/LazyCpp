@@ -10,7 +10,9 @@
 
 namespace math {
 
-bool isPowerOfTwo(int number) { return number && !(number & (number - 1)); }
+bool isPowerOfTwo(int number) {
+  return ((number > 0) and !(number & (number - 1)));
+}
 
 } // namespace math
 
