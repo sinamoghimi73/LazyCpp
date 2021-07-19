@@ -1,3 +1,4 @@
+#include <fstream>
 #include <iostream>
 #include <string>
 #include <vector>
@@ -10,6 +11,18 @@ void buildOutput(std::string &output, const std::vector<int> &notes,
                  std::to_string(notes.at(i)) + " + ");
   output.pop_back();
   output.pop_back();
+}
+
+void save(const std::vector<std::vector<int>> &combinations,
+          const std::vector<int> &notes, const int &notesCount,
+          const std::string &filename) {
+
+  std::ofstream ofs(filename);
+  for (const std::vector<int> &coefficients : combinations) {
+    std::string output{};
+    buildOutput(output, notes, coefficients, notesCount);
+    ofs << output << std::endl;
+  }
 }
 
 void print(const std::vector<int> &notes,
@@ -56,12 +69,20 @@ void bankNotesCombination(const int &target, std::vector<int> &notes,
   generateAllCombinations(target, startIndex, notes, coefficientVector,
                           notesCount, combinations);
   printAllCombinations(combinations, notes, notesCount);
+  //    save(combinations, notes, notesCount, "bankNotesCombination.txt");
+}
+
+void getReady() {
+  std::ios_base::sync_with_stdio(false);
+  std::cin.tie(NULL);
+  std::cout.tie(NULL);
 }
 
 int main() {
+  getReady();
+
   std::vector<int> notes{2, 1, 5};
-  int noteSummation{};
-  std::cin >> noteSummation;
+  int noteSummation{100};
   bankNotesCombination(noteSummation, notes, static_cast<int>(notes.size()));
   return 0;
 }
