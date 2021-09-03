@@ -12,14 +12,14 @@
 
 class passwordGenerator {
 public:
-  passwordGenerator(int size = 0);
+  passwordGenerator(size_t size = 0);
 
   void generatePassword();
 
   std::string getPassword();
 
 private:
-  const int _size{};
+  const size_t _size{};
   const std::string _capitalLetters{}, _smallLetters{}, _numbers{}, _symbols{},
       _alphaNumeric{};
   const int _alphaNumericSize{};

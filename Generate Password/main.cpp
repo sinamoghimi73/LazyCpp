@@ -8,7 +8,7 @@
 #include <iostream>
 #include <string>
 
-std::string password(int &length) {
+std::string password(size_t &length) {
   passwordGenerator password(length);
   password.generatePassword();
   return password.getPassword();
@@ -17,7 +17,7 @@ std::string password(int &length) {
 int main() {
   std::cout << "Length of the password: ";
 
-  int length{};
+  size_t length{};
   std::cin >> length;
 
   std::cout << "Generated password: " << password(length) << std::endl;
